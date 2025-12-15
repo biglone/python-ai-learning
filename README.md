@@ -174,8 +174,11 @@ pip install numpy pandas matplotlib seaborn scipy
 # 机器学习
 pip install scikit-learn joblib
 
-# 深度学习
+# 深度学习 (请根据你的系统和 CUDA 版本参考 PyTorch 官网安装命令)
+# 官网: https://pytorch.org/get-started/locally/
+# CPU 版本示例:
 pip install torch torchvision tqdm
+# GPU 版本请访问官网获取正确的安装命令
 
 # 图像处理
 pip install Pillow
