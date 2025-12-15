@@ -165,27 +165,57 @@ conda activate ai-learning
 
 ### 安装依赖
 
+#### 必装依赖（核心库）
+
 ```bash
 # 基础库
-pip install numpy pandas matplotlib seaborn
+pip install numpy pandas matplotlib seaborn scipy
 
 # 机器学习
-pip install scikit-learn xgboost lightgbm catboost
+pip install scikit-learn joblib
 
 # 深度学习
-pip install torch torchvision
+pip install torch torchvision tqdm
 
-# NLP
-pip install transformers sentence-transformers
-
-# 时间序列
-pip install statsmodels pmdarima prophet
-
-# Web 开发
-pip install fastapi uvicorn
+# 图像处理
+pip install Pillow
 
 # Jupyter
 pip install jupyter notebook
+```
+
+#### 按章节可选依赖
+
+```bash
+# 02-Python进阶/06-类型注解
+pip install mypy
+
+# 04-机器学习基础/07-模型持久化与部署
+pip install flask
+
+# 04-机器学习基础/09-集成学习进阶
+pip install xgboost lightgbm catboost
+
+# 04-机器学习基础/10-降维技术
+pip install umap-learn
+
+# 04-机器学习基础/11-时间序列预测
+pip install statsmodels pmdarima prophet yfinance
+
+# 05-深度学习基础/05-NLP自然语言处理入门、06-Transformers基础
+pip install transformers sentence-transformers
+
+# 05-深度学习基础/07-目标检测入门
+pip install ultralytics
+
+# 05-深度学习基础/09-强化学习入门
+pip install gymnasium
+
+# 05-深度学习基础/10-大语言模型LLM应用
+pip install openai anthropic requests
+
+# 06-实战项目/02-图像分类Web应用
+pip install fastapi uvicorn python-multipart
 ```
 
 ### 启动 Jupyter Notebook
@@ -226,7 +256,7 @@ jupyter notebook
 
 ## 教程统计
 
-- **总章节数**: 50+
+- **总章节数**: 48
 - **Python 基础**: 13 章
 - **Python 进阶**: 6 章
 - **数据科学**: 6 章
