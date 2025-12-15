@@ -181,8 +181,19 @@ pip install torch torchvision tqdm
 pip install Pillow
 
 # Jupyter
-pip install jupyter notebook
+pip install jupyter notebook ipykernel
 ```
+
+#### 注册 Jupyter 内核
+
+确保 Jupyter 使用正确的 Python 环境：
+
+```bash
+# 在 ai-learning 环境中注册内核
+python -m ipykernel install --user --name ai-learning --display-name "Python (ai-learning)"
+```
+
+启动 Jupyter 后，在 Notebook 中选择 **Kernel → Change Kernel → Python (ai-learning)** 确保使用正确环境。
 
 #### 按章节可选依赖
 
@@ -217,6 +228,26 @@ pip install openai anthropic requests
 # 06-实战项目/02-图像分类Web应用
 pip install fastapi uvicorn python-multipart
 ```
+
+### 关于数据集和模型下载
+
+本教程的部分章节会**自动联网下载**数据集或预训练模型：
+
+| 章节 | 下载内容 | 大小 |
+|------|----------|------|
+| 03-数据科学基础/04-Seaborn | 示例数据集 (tips, iris 等) | ~1MB |
+| 04-机器学习基础/10-降维技术 | Olivetti 人脸数据集 | ~3MB |
+| 05-深度学习基础/04-图像分类 | CIFAR-10 数据集 | ~170MB |
+| 05-深度学习基础/06-Transformers | 预训练模型权重 | ~500MB+ |
+| 05-深度学习基础/07-目标检测 | YOLO/Faster R-CNN 权重 | ~100MB+ |
+
+**默认缓存目录：**
+- PyTorch 模型：`~/.cache/torch/`
+- Hugging Face 模型：`~/.cache/huggingface/`
+- Scikit-learn 数据：`~/scikit_learn_data/`
+- Seaborn 数据：`~/.seaborn-data/`（新版本已移至系统缓存目录）
+
+> **提示**：首次运行相关章节时请确保网络连接正常。下载完成后会自动缓存，后续运行无需重复下载。
 
 ### 启动 Jupyter Notebook
 
